@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts</title>
+    <style>
+        /* Reset basic styles */
+        body, h1, p, button {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4; /* Light background color */
+            color: #333; /* Dark text color */
+            line-height: 1.6;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Hero section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f1f5f9; /* Base grayish background */
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content img {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        /* Title and text */
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #2d3748; /* Darker color for the title */
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #4a5568; /* Dark gray text for description */
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        /* Button style */
+        .btn {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+            color: white;
+            background-color: #3182ce; /* Blue background */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2b6cb0; /* Darker blue when hovering */
+        }
+
+        /* Responsive design */
+        @media (min-width: 768px) {
+            .hero-content {
+                flex-direction: row-reverse;
+                text-align: left;
+            }
+
+            .hero-content img {
+                margin-left: 20px;
+            }
+        }
+
+        /* Utility classes for spacing */
+        .py-6 {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+
+        .btn-primary {
+            background-color: #3182ce;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="hero bg-base-200 min-h-screen">
+      <div class="hero-content flex-col lg:flex-row-reverse">
+        <img
+          src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+          class="max-w-sm rounded-lg shadow-2xl"
+        />
+        <div>
+          <h1 class="text-5xl font-bold">Box Office News!</h1>
+          <p class="py-6">
+            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+            quasi. In deleniti eaque aut repudiandae et a id nisi.
+          </p>
+          <button class="btn btn-primary">Get Started</button>
+        </div>
+      </div>
+    </div>
+</body>
+</html>
