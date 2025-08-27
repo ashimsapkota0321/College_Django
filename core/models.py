@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import date
+
 class Student(models.Model):
     first_name = models.CharField(max_length=50)
     middle_name = models.CharField(max_length=50, blank=True, null=True)

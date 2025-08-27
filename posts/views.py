@@ -9,7 +9,10 @@ def post(request):
     template = 'posts/posts.html'
     return render(request,template,context)
 
-def post_details(request,id):
-    print(id)
+def post_details(request,post_id):
+    post = Post.objects.get(id=post_id)
+    context={
+        'post' : post
+    }
     template = 'posts/post_details.html'
-    return render(request,template)
+    return render(request,template,context)

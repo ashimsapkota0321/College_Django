@@ -1,9 +1,23 @@
-from django.http import HttpResponse
-from django.shortcuts import render
-
+from django.shortcuts import render,redirect
+from .models import Student
+from .forms import BioModelForm
 def home(request):
-    template = 'home/index.html'
-    return render(request,template)
+    if request.method == "POST":
+        form = BioModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('resume/')
+        
+        else:
+            print("Please fill all the required fields.")
+
+    forms = BioModelForm()
+    context = {
+        "bio_form" : forms
+    }
+    template = 'core/index.html'
+    return render(request,template,context)
+   
 
 def resume(request):
     template = 'home/resume.html'

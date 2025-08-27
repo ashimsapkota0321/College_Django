@@ -25,8 +25,8 @@
   <img src="{{ post.image.url }}" class="blog-image card-img-top" height='170' width='170' alt="...">
   <div class="card-body">
     <h5 class="card-title">{{ post.title }}</h5>
-    <p class="card-text">{{ post.description }}</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <p class="card-text">{{ post.description |truncatechars_html:90}}</p>
+    <a href= {% url "post_details" post.id %} class="btn btn-primary">Read More</a>
   </div>
 </div>
 {% endfor %}
